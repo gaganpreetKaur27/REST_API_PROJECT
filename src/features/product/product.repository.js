@@ -39,6 +39,7 @@ class ProductRepository {
     } catch (e) {
       console.log("err getAll--- ", e);
       throw new ApplicationError("something wrong with DB", 500);
+      //test
     }
   }
 
