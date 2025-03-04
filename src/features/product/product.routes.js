@@ -20,6 +20,7 @@ productRouter.get("/", (req, res) => {
   productController.getAllProducts(req, res);
 });
 
+//test
 productRouter.get("/:id", (req, res) => {
   productController.getOneProduct(req, res);
 });
