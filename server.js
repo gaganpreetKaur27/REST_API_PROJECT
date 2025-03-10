@@ -12,7 +12,7 @@ import cartRouter from "./src/features/cart/cart.routes.js";
 import basicAuthorizer from "./src/middlewares/basicAuth.middleware.js";
 import jwtAuth from "./src/middlewares/jwtAuth.middleware.js";
 //import apiDocs from "./swagger.json" assert { type: "json" };
-//import apiDocs from "./swagger_3.0.json" assert { type: "json" };
+import apiDocs from "./swagger_3.0.json" assert { type: "json" };
 import loggerMiddleware from "./src/middlewares/logger.middleware.js";
 import { connectToMongoDB } from "./src/config/mongodb.js";
 import { connectUsingMongoose } from "./src/config/mongooseConfig.js";
@@ -66,7 +66,7 @@ server.use("/api/cartItems", jwtAuth, cartRouter);
 server.use("/api/users", userRouter);
 
 //swagger docs
-//server.use("/api-docs", swagger.serve, swagger.setup(apiDocs));
+server.use("/api-docs", swagger.serve, swagger.setup(apiDocs));
 
 //default handler
 server.get("/", (req, res) => {
