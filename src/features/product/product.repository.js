@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 import { reviewSchema } from "./review.schema.js";
 //import { productSchema } from "./product.schema.js";
 import { productSchemaModel } from "./product.schema.js";
-import { upload } from "../../middlewares/fileUpload.middleware.js";
+import { upload } from "src/middlewares/fileupload.middleware.js";
 import { productRouter, productController } from "./product.routes.js";
 
 //const ProductModel = mongoose.model("Product", productSchema);
