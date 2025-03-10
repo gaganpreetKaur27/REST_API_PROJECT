@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 import { reviewSchema } from "./review.schema.js";
 //import { productSchema } from "./product.schema.js";
 import { productSchemaModel } from "./product.schema.js";
-import { upload } from "src/middlewares/fileupload.middleware.js";
+import { upload } from "../../middlewares/fileUpload.middleware.js";
 import { productRouter, productController } from "./product.routes.js";
 
 //const ProductModel = mongoose.model("Product", productSchema);
@@ -240,14 +240,14 @@ class ProductRepository {
 }
 
 export default ProductRepository;
-productRouter.post(
-  "/",
-  upload.single("imageUrl"),
-  (req, res) => {
-    productController.addProduct(req, res);
-  }
-  //productController.addProduct
-); //upload.array() => multiple file uploads
+// productRouter.post(
+//   "/",
+//   upload.single("imageUrl"),
+//   (req, res) => {
+//     productController.addProduct(req, res);
+//   }
+//   //productController.addProduct
+// ); //upload.array() => multiple file uploads
 
 // async groupExpensesByTags() {
 //   const db = getDB();
